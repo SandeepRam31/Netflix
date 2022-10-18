@@ -1,0 +1,24 @@
+.row__posters {
+    display: flex;
+    overflow-y: hidden; /*makes sure that the treding now also doesnyt move when you scroll for the movies */
+    overflow-x: scroll;
+    padding: 20px; /*if you dont add in the padding it zooms in and crops off */
+}
+
+/*this is to say to make use of  the scroll feature but not to see the scroll cause it looks ugly*/
+.row__posters::-webkit-scrollbar {
+    display: none;
+}
+
+
+.row__poster {
+    object-fit: contain;
+    width: 100%;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms; /* so that it doesnt cuit it off but it actually hovers for a long time */
+}
+
+.row__poster:hover {
+    transform: scale(1.08);
+}
